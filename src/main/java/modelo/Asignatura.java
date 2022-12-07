@@ -87,7 +87,7 @@ public class Asignatura {
         return this.costoHoras*this.numHoras;
     
     }
-    public Sring periodoDuracion(){
+    public String periodoDuracion(){
         var months= (this.numHoras/this.horasSemanales);
         
         return "Tiene una duracion= "+months+" meses";
