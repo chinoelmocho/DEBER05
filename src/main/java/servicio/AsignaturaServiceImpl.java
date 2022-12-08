@@ -4,6 +4,7 @@
  */
 package servicio;
 
+import java.util.ArrayList;
 import java.util.List;
 import modelo.Asignatura;
 
@@ -13,6 +14,11 @@ import modelo.Asignatura;
  */
 public class AsignaturaServiceImpl implements  AsignaturaService{
 public List<Asignatura> asiganturaList;
+
+public AsignaturaServiceImpl (){
+this.asiganturaList=new ArrayList<>();
+}
+
     @Override
     public void crear(Asignatura asignatura) {
         this.asiganturaList.add(asignatura);

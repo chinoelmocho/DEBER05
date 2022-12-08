@@ -16,8 +16,9 @@ public class Asignatura {
     private double costoHoras;
     private int cuposDisponibles;
     private Carrera Carrera;
+    private String modalidad;
 
-    public Asignatura(String nombre, String docente, int numHoras, int horasSemanales, double costoHoras, int cuposDisponibles, Carrera Carrera) {
+    public Asignatura(String nombre, String docente, int numHoras, int horasSemanales, double costoHoras, int cuposDisponibles, Carrera Carrera,String modalidad) {
         this.nombre = nombre;
         this.docente = docente;
         this.numHoras = numHoras;
@@ -25,6 +26,15 @@ public class Asignatura {
         this.costoHoras = costoHoras;
         this.cuposDisponibles = cuposDisponibles;
         this.Carrera = Carrera;
+        this.modalidad= modalidad;
+    }
+
+    public String getModalidad() {
+        return modalidad;
+    }
+
+    public void setModalidad(String modalidad) {
+        this.modalidad = modalidad;
     }
 
     public String getNombre() {
@@ -100,7 +110,7 @@ public class Asignatura {
     
     @Override
     public String toString() {
-        return "Asignatura{" + "nombre=" + nombre + ", docente=" + docente + ", numHoras=" + numHoras + ", horasSemanales=" + horasSemanales + ", costoHoras=" + costoHoras + ", cuposDisponibles=" + cuposDisponibles+", con un costo total de="+this.costoAsignatura()+this.periodoDuracion() + "\n, Carrera=" + Carrera.toString() + '}';
+        return "Asignatura{" + "nombre=" + nombre + ", docente=" + docente + ", numHoras=" + numHoras + ", horasSemanales=" + horasSemanales + ", costoHoras=" + costoHoras + ", cuposDisponibles=" + cuposDisponibles+", con un costo total de="+this.costoAsignatura()+this.periodoDuracion()+", de modalidad"+this.modalidad + "\n, Carrera=" + Carrera.toString() + '}';
     }
     
     

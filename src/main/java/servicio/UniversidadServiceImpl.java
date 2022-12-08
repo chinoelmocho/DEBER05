@@ -4,6 +4,7 @@
  */
 package servicio;
 
+import java.util.ArrayList;
 import java.util.List;
 import modelo.Universidad;
 
@@ -13,8 +14,14 @@ import modelo.Universidad;
  */
 public class UniversidadServiceImpl implements UniversidadService {
 private List<Universidad> universidadList;
+
+    public UniversidadServiceImpl(){
+    this.universidadList = new ArrayList<>();
+    
+    }
     @Override
     public void crear(Universidad universidad) {
+        
         this.universidadList.add(universidad);
     }
 

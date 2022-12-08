@@ -69,12 +69,12 @@ public class Universidad {
     @Override
     public String toString() {
      
-        return "Universidad{" + "nombre=" + nombre + ", director=" + director + ", yearFundacion=" + yearFundacion + ", numEstudiantes=" 
+        return "\nUniversidad{" + "nombre=" + nombre + ", director=" + director + ", yearFundacion=" + yearFundacion + ", numEstudiantes=" 
                 + numEstudiantes + ", costoMatricula=" + costoMatricula + ", años de Universidad="+this.yearUniversidad()+", Ingresos por Matriculas="+this.ingresoporMatriculas()+'}';
     }
 
     public int yearUniversidad() {
-        var years = this.yearFundacion.getYear() - LocalDate.now().getYear();
+        var years = LocalDate.now().getYear()-this.yearFundacion.getYear()  ;
         if (this.yearFundacion.getMonthValue() < LocalDate.now().getMonthValue()) {
             years -= 1;
         }
